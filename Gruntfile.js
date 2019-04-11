@@ -16,14 +16,19 @@ module.exports = function(grunt) {
                 transform:  [ require('brfs') ],
                 browserifyOptions: {
                     //Папка з корнем джерельних кодів javascript
-                    basedir: "Frontend/src/js/"
+                    basedir: "views/src/js/"
                 }
             },
 
             //Збірка з назвою піца
             pizza: {
-                src:        'Frontend/src/main.js',
-                dest:       'Frontend/www/assets/js/main.js'
+                src:        'views/src/main.js',
+                dest:       'views/assets/js/app.js'
+            },
+
+            order: {
+                src:        'views/src/order.js',
+                dest:       'views/assets/js/order.js'
             }
         }
     };
@@ -36,9 +41,9 @@ module.exports = function(grunt) {
         //Назва завдання будь-яка
         scripts: {
             //На зміни в яких файлах реагувати
-            files: ['Frontend/src/**/*.js', 'Frontend/**/*.ejs'],
+            files: ['views/src/**/*.js', 'views/**/*.ejs'],
             //Які завдання виконувати під час зміни в файлах
-            tasks: ['browserify:pizza']
+            tasks: ['browserify:pizza', 'browserify:order']
         }
     };
 
@@ -56,6 +61,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default',
         [
             'browserify:pizza',
+            'browserify:order'
             //Інші завдання які необхідно виконати
         ]
     );

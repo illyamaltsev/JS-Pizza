@@ -1,0 +1,99 @@
+@theme-color: orange;
+
+@import "header.less";
+@import "right.less";
+@import "container.less";
+@import "order_page.less";
+
+//main
+body{
+	background: #FFFFF5;
+}
+
+button{
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+}
+
+.button{
+	background-color: @theme-color;
+	color: white;
+	text-decoration: none;
+}
+
+.left-width{
+	width: 70%;
+}
+
+.right-width{
+	width: 30%;
+}
+
+.pizza-c{
+    background: @theme-color;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.filter-button{
+	margin: 10px;
+	display: inline-block;
+	color: @theme-color;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: darken( @theme-color, 15%);
+	}
+}
+
+.filter-active{
+	background: @theme-color;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px){
+	.right-width{
+		width: 40%;
+	}
+	.left-width{
+		width: 60%;
+	}
+	.so{
+    	display: none;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .fo{
+    	display: none;
+    }
+}
+
+.sale{
+	background: @theme-color;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	height: 80px;
+	margin-left: 15px;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.sale:before {
+	content: "";
+	height: 0; 
+	width: 0;
+	position: absolute; 
+	left: 0; 
+	top: -35px;
+	border-bottom: 35px solid @theme-color;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+}

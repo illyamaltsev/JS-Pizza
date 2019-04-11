@@ -1,0 +1,35 @@
+
+<% if (order == " (Велика)") {%>
+<div class="element" id="<%= pizza.id + '-big' %>">
+<%}else{%>
+<div class="element" id="<%= pizza.id + '-small'%>">
+<%}%>
+    <img src="<%= pizza.icon %>" class="element-image" alt="...">
+    <div class="element-title">
+        <%= pizza.title %><%= order %>
+        <button class="element-delete" data-tooltip="Видалити">X</button>
+    </div>
+    <% if (order == " (Велика)") {%>
+        <i class='fas'>&#xf338;</i>
+        <span style="font-size: 12px;"><%= pizza.big_size.size %></span>
+        <i class='fas' style="margin-left: 5px;">&#xf562;</i>
+        <span style="font-size: 12px;"><%= pizza.big_size.weight %></span>
+        <div class="amount-bar">
+            <button class="element-minus" data-tooltip="Мінус" >–</button>
+            <span class="element-amount">1</span>
+            <button class="element-plus" data-tooltip="Плюс">+</button>  
+        </div>
+        <span class="price"><%= pizza.big_size.price %></span>
+    <%}else{%>
+        <i class='fas'>&#xf338;</i>
+        <span style="font-size: 12px;"><%= pizza.small_size.size %></span>
+        <i class='fas' style="margin-left: 5px;">&#xf562;</i>
+        <span style="font-size: 12px;"><%= pizza.small_size.weight %></span>
+        <div class="amount-bar">
+            <button class="element-minus" data-tooltip="Мінус" >–</button>
+            <span class="element-amount">1</span>
+            <button class="element-plus" data-tooltip="Плюс">+</button>  
+        </div>
+        <span class="price"><%= pizza.small_size.price %></span>
+    <%}%>
+</div>

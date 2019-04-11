@@ -1,0 +1,49 @@
+<% include common/header.ejs %>
+
+<% include common/right.ejs %>
+
+<div class="left-width">
+    <div class="container">
+                <h2>1. Контактнi данi</h2>
+                <div class="input-group-lg form-group">
+                    <label class="control-label col-sm-2 label-text" for="name">Iм'я:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Дон Ягон">
+                    </div>
+                </div>
+                <div id="name-error" class="errors">Введiть правильне iм'я</div>
+                <div class="input-group-lg form-group">
+                    <label class="control-label col-sm-2 label-text" for="phone">Телефон:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="phone" placeholder="911">
+                    </div> <br/>     
+                </div>
+                <div id="phone-error" class="errors">Введiть правильний телефон</div>
+                <div class="input-group-lg form-group">
+                    <label class="control-label col-sm-2 label-text" for="adress">Адреса:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="adress" placeholder="вул. Мальцева 10">
+                    </div>
+                </div>
+                <div id="adress-error" class="errors">Введiть правильну адресу</div>
+                <div class="bd-callout bd-callout-warning">
+                    <h4 id="conveying-meaning-to-assistive-technologies">Iнформацiя про замовлення</h4>
+                    <span class="label-text">Приблизний час доставки: </span><span id="order-time">невiдомий</span> <br>
+                    <span class="label-text">Адреса доставки: </span><span id="order-adress">невiдома</span> 
+                </div>
+                <div class="col-xs-12 google-map">
+                    <div id="googleMap"></div>
+                </div>
+    </div>
+</div>
+<div class="figure"></div>
+    <div class="sale">ЦЬОГО<br>ТИЖНЯ<br>НА ВСЕ<br>-20%</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script	type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBu8EfHXfhweZE-W19Uo2d_UIFrmKvOeMo"></script>
+    <script type="text/javascript"  src="assets/js/order.js"> </script>
+</body>
+</html>

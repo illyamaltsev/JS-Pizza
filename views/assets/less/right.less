@@ -1,0 +1,75 @@
+.right{
+    top: 0;
+	background: #F5F5F5;
+	float:right;
+	position: fixed;
+	right: 0;
+    height: 100%;
+    
+    &-first-block{
+        background: white;
+        width: 100%;
+        height: 81px;
+        line-height: 70px;
+        padding: 10px;
+    }
+
+    &-middle-block{
+    }
+
+    &-last-block{
+        height: 140px;
+        background: white;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+.element{
+	padding: 10px;
+    border-top: 1px solid #DEDEDE;
+    font-size: 15px;
+    &-title{
+        color: @theme-color;
+        margin: 0;
+        font-weight: bold;
+    }
+    &-plus{
+        background: lightgreen;
+        border-radius: 30px;
+    }
+    &-minus{
+        background: lightcoral;
+        border-radius: 30px;
+    }
+    &-delete{
+        color: grey;
+        background: #F5F5F5;
+    }
+    &-image{
+        width: 100px;
+        height: 100px;
+        transform: translateX(65%);
+        float: right;
+    }
+}
+
+.circular-button{
+    border-radius: 30px;
+    color: white;
+}
+
+.orders-c{
+    background: @theme-color;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.del_all{
+    color: grey;
+    float: right;
+    display: inline-block;
+}

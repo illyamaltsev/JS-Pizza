@@ -1,0 +1,46 @@
+
+
+<div class="card" id="<%= pizza.id %>">
+    <img src="<%= pizza.icon %>" class="card-img-top" alt="...">
+    <div class="card-body" id="pizza-card">
+        <h5 class="card-title">
+        <%= pizza.title %>
+        <%if (pizza.is_new){%>
+        <span class="badge badge-danger">Нова</span>
+        <%}else if (pizza.is_popular){%>
+        <span class="badge badge-success">Популярна</span>
+        <%}%>
+        </h5>
+        <span class="card-text"><%= pizza.type %></span>
+        <p class="card-text card-description"> <%Object.keys(pizza.content).forEach(function(k){%>
+            <%=pizza.content[k] %>, 
+        <%}); %> </p>
+        <div class="pizza">
+        <% if (pizza.small_size) {%>
+            <div class="pizza-left">
+                <i class='fas'>&#xf338;</i>
+                <span class="card-text card-small"><%=pizza.small_size.size%></span>
+                <br>
+                <i class='fas'>&#xf562;</i>
+                <span class="card-text card-small"><%=pizza.small_size.weight%></span>
+                <h3><%=pizza.small_size.price%></h3>
+                <button class="btn button-small button">Купити</button>
+            </div>
+        <% } %>
+        <% if (pizza.big_size) {%>
+            <div class="pizza-right">
+                <i class='fas'>&#xf338;</i>
+                <span class="card-text card-small"><%=pizza.big_size.size%></span>
+                <br>
+                <i class='fas'>&#xf562;</i>
+                <span class="card-text card-small"><%=pizza.big_size.weight%></span>
+                <h3><%=pizza.big_size.price%></h3>
+                <button class="btn button-big button">Купити</button>
+                <br>
+                <br>
+            </div>
+        <% } %>
+        </div>
+    </div>
+</div>
+
